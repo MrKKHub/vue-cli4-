@@ -1,17 +1,33 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Button type="info" @click='getLogin'>信息按钮</Button>
+    <div class="tip">点击按钮获取到的信息是: {{msg}}</div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import { Button } from 'vant'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Button
+  },
+  data () {
+    return {
+      msg: ''
+    }
+  },
+  methods: {
+    getLogin () {
+      this.$http.login().then(res => {
+        console.log(res)
+        this.msg = res
+      })
+    }
   }
 }
 </script>
+
+<style lang="less" scoped>
+.tip{ margin-top: 20px;}
+</style>
