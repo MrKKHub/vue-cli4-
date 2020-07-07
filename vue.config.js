@@ -33,3 +33,4 @@ module.exports = {
 }
 // "postcss-cssnext": "^3.1.0",    这两个需要都安装 不然会报错
 // "postcss-pxtorem": "^5.1.1",
+// "git push -u origin master"  提交github
