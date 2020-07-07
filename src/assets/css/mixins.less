@@ -1,0 +1,20 @@
+// use: .flex()
+.flex(@direction: row,@horizontalDirection: center, @verticalDirectionWay: center) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @horizontalDirection;
+  align-items: @verticalDirectionWay;
+}
+
+.singLineHidden() {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.multiLineHidden(@num: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @num;
+  overflow: hidden;
+}

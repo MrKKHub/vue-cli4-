@@ -1,3 +1,4 @@
+const path = require('path')
 module.exports = {
   css: {
     loaderOptions: {
@@ -21,6 +22,12 @@ module.exports = {
           '^/api': ''
         }
       }
+    }
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [path.resolve(__dirname, 'src/assets/css/index.less')] // 引入全局样式
     }
   }
 }

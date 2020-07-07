@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <router-view/>
+    <baseLoading v-if="$store.state.isShowLoading" />
   </div>
 </template>
 
+<script>
+export default {
+
+}
+</script>
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
