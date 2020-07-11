@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    <baseLoading v-if="$store.state.isShowLoading" />
+    <!-- <baseLoading v-if="$store.state.isShowLoading" /> -->
   </div>
 </template>
 

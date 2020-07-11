@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import http from './assets/api/http.js'
+import common from './assets/common'
 
 import baseLoading from './components/baseLoading.vue'
 
@@ -15,10 +16,12 @@ Vue.config.productionTip = false
 Vue.component('baseLoading', baseLoading)
 
 Vue.prototype.$http = http
+Vue.prototype.$common = common
 
 // Vue.directive('指令名字', 钩子)
 Vue.directive('focus', {
   inserted: (el) => {
+    console.log(el)
     el.focus()
   }
 })
