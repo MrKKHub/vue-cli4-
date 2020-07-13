@@ -38,7 +38,7 @@ export default {
       console.log('------num', num)
     },
     changeValue () {
-      this.$common.debounce(this.add, 2000, 1)
+      this.$common.debounce(this.add, 1000, 1)
     }
   },
   updated () {

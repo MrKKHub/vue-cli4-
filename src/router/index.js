@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import personal from './personal'
+import personal from './About'
 
 Vue.use(VueRouter)
 
